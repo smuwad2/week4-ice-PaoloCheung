@@ -14,12 +14,12 @@
    <button id='btnAdd' onclick='addItem()'>Enter</button>
 
    <ul>
-      <li>Notebook<button onlick="removeItem(this.parentNode)">delete</button></li>
-      <li>Jello<button onlick="removeItem(this.parentNode)">delete</button></li>
-      <li>Spinach<button onlick="removeItem(this.parentNode)">delete</button></li>
-      <li>Rice<button onlick="removeItem(this.parentNode)">delete</button></li>
-      <li>Birthday Cake<button onlick="removeItem(this.parentNode)">delete</button></li>
-      <li>Candles<button onlick="removeItem(this.parentNode)">delete</button></li>
+      <li>Notebook<button onclick="removeItem(this.parentNode)">delete</button></li>
+      <li>Jello<button onclick="removeItem(this.parentNode)">delete</button></li>
+      <li>Spinach<button onclick="removeItem(this.parentNode)">delete</button></li>
+      <li>Rice<button onclick="removeItem(this.parentNode)">delete</button></li>
+      <li>Birthday Cake<button onclick="removeItem(this.parentNode)">delete</button></li>
+      <li>Candles<button onclick="removeItem(this.parentNode)">delete</button></li>
    </ul>
 
    <script>
@@ -31,8 +31,8 @@
         let liElem = document.createElement('li');
         liElem.innerText = ItemVal;
         const btnElem = document.createElement('button');
-        btmElem.innerText = 'delete';
-        btn.addEventListner('click', function() {
+        btnElem.innerText = 'delete';
+        btnElem.addEventListener('click', function() {
          removeItem(this.parentNode);
         })
         liElem.appendChild(btnElem);
